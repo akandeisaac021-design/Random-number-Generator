@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(135deg, #700000, #c22f2f, #ec7d3e);
+  min-height: 100vh;              /* fixed from 500vh */
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;              /* fixed from 50vh */
+  padding: 40px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 80px 64px;             /* reduced from 120px 80px */
+  max-width: 720px;               /* reduced from 840px */
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 36px;
+  color: #1f2937;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin: 0 0 40px;
+  font-size: 16px;                /* reduced from 32px */
+}
+
+.result {
+  font-size: 80px;                /* reduced from 160px */
+  font-weight: 700;
+  color: #203a43;
+  margin-bottom: 40px;
+  min-height: 100px;
+}
+
+button {
+  background: #203a43;
+  color: white;
+  border: none;
+  padding: 18px 40px;             /* reduced from 36px 80px */
+  border-radius: 10px;
+  font-size: 18px;                /* reduced from 36px */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background: #16262c;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #dc2626;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;                /* reduced from 45px */
+  color: #374151;
+}
+
+.input-group input {
+  width: 80px;                    /* reduced from 160px */
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.nav-tab {
+  background: transparent;
+  color: #6b7280;
+  border: 2px solid #d1d5db;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-tab.active {
+  background: #203a43;
+  color: white;
+  border-color: #203a43;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 40px 24px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .result {
+    font-size: 48px;
+    min-height: 60px;
+  }
+
+  .input-group {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  button {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 16px;
+  }
+}
